@@ -4,6 +4,7 @@ import { FooterLogoIcon } from "../Assets/Footer-Logo-Icon";
 import { LinkedInIcon } from "../Assets/linked-in-icon";
 import { TwitterIcon } from "../Assets/twitter-icon";
 import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Footer = ({ setActive, active }) => {
   const [phone, setPhone] = useState("");
@@ -151,7 +152,7 @@ export const Footer = ({ setActive, active }) => {
       </div>
       <ToastContainer
         position="top-center"
-        autoClose={700}
+        autoClose={1000}
         hideProgressBar={true}
       />
     </>
