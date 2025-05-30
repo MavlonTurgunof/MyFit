@@ -46,7 +46,7 @@ export const Navbar = ({ active, setActive }) => {
             ].map((item) => (
               <li key={item} className="p-[7px]">
                 <a
-                  onClick={() => handleSmoothNav(item)}
+                  onClick={() => setActive(item)}
                   className={`cursor-pointer p-2 rounded-full ${
                     active === item
                       ? "router-link-active router-link-exact-active whitespace-nowrap cursor-pointer no-underline  transition-all duration-300 border-[0.5px] border-solid border-[#020202]  bg-opacity-5 rounded-full !text-[#020202] p-[10px] h-[58px]"
@@ -93,7 +93,7 @@ export const Navbar = ({ active, setActive }) => {
             ].map((item) => (
               <li key={item} className="p-[7px]">
                 <a
-                  onClick={() => setActive(item)}
+                  onClick={() => handleSmoothNav(item)}
                   className={`cursor-pointer p-2 rounded-full ${
                     active === item
                       ? "router-link-active router-link-exact-active whitespace-nowrap shadow-sm shadow-cyan-500 cursor-pointer no-underline font-bold  transition-all duration-300 border-[0.5px] border-solid border-[#020202]  bg-opacity-5 rounded-full !text-[#020202] p-[10px] h-[58px]"
