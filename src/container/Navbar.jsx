@@ -12,6 +12,11 @@ export const Navbar = ({ active, setActive }) => {
     setMobileMenuOpen(false);
   };
 
+  const handleSmoothNav = (item) => {
+    setMobileMenuOpen(false);
+    setActive(item);
+  };
+
   return (
     <>
       <div className="flex items-center justify-between py-[30px] md:py-[60px] mx-[15px] md:mx-0">
@@ -41,7 +46,7 @@ export const Navbar = ({ active, setActive }) => {
             ].map((item) => (
               <li key={item} className="p-[7px]">
                 <a
-                  onClick={() => setActive(item)}
+                  onClick={() => handleSmoothNav(item)}
                   className={`cursor-pointer p-2 rounded-full ${
                     active === item
                       ? "router-link-active router-link-exact-active whitespace-nowrap cursor-pointer no-underline  transition-all duration-300 border-[0.5px] border-solid border-[#020202]  bg-opacity-5 rounded-full !text-[#020202] p-[10px] h-[58px]"
