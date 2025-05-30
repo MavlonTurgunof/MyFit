@@ -38,21 +38,22 @@ const Modal = ({ onClose }) => {
 
   return (
     <>
-      <div className="fixed inset-0 bg-black/60 bg-opacity-50 flex justify-center items-center z-50">
-        <div className="bg-white max-w-[1100px] flex gap-[38px] justify-center items-end rounded-[20px] relative">
+      <div className="fixed inset-0 bg-black/60 bg-opacity-50 flex justify-center items-center z-50 ">
+        <div className="bg-white max-w-[1100px] flex md:flex-row flex-col gap-[38px] justify-center items-end rounded-[20px] relative max-md:m-[10px]">
           <button
             onClick={onClose}
-            className="absolute top-[15px] right-[15px]"
+            className="absolute top-[5px] right-[5px] md:top-[15px] md:right-[15px]"
           >
             <XIcon />
           </button>
 
-          <div className="my-[91px] ml-[70px]">
-            <h1 className="font-bold text-[50px] mb-[20px]">
-              3 oylik bepul <span>Premium</span> sovg'a
+          <div className="md:my-[91px] md:ml-[70px] my-[30px] mx-[20px]">
+            <h1 className="font-bold text-[40px] md:text-[50px] mb-[20px] text-center">
+              3 oylik bepul <span className="text-[#B9FF66]">Premium</span>{" "}
+              sovg'a
             </h1>
 
-            <p className="font-light text-[24px]">
+            <p className="font-light text-[20px] md:text-[24px] text-center">
               Ariza qoldiring — dastur tayyor bo‘lganda sizga 3 oylik Premium
               bepul taqdim etamiz!
             </p>
@@ -63,7 +64,7 @@ const Modal = ({ onClose }) => {
                 name="name"
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 placeholder="Ism"
-                className="border-[2px] border-[#B9FF66] w-full mb-[9px] p-[20px] rounded outline-none font-light text-[18px]"
+                className="border-[2px] border-[#B9FF66] w-full mb-[9px] p-[10px] md:p-[20px] rounded outline-none font-light text-[18px]"
               />
               <input
                 type="number"
@@ -71,18 +72,18 @@ const Modal = ({ onClose }) => {
                 name="phone"
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 placeholder="Telefon raqam"
-                className="border-[2px] border-[#B9FF66] w-full mb-[22px] p-[20px] rounded outline-none font-light text-[18px]"
+                className="border-[2px] border-[#B9FF66] w-full mb-[22px] p-[10px] md:p-[20px] rounded outline-none font-light text-[18px]"
               />
               <button
                 onClick={(e) => handleSubmit(e)}
-                className="bg-[#B9FF66] text-black px-[10px] py-[15.5px] w-1/2 font-bold text-[22px] rounded-[10px] shadow-lg shadow-blue-500/50 hover:scale-[105%] hover:shadow-2xl hover:transition-all hover:duration-500"
+                className="bg-[#B9FF66] text-black px-[8px] py-[12px] md:px-[10px] md:py-[15.5px] w-1/2 font-bold text-[22px] rounded-[10px] shadow-lg shadow-blue-500/50 hover:scale-[105%] hover:shadow-2xl hover:transition-all hover:duration-500"
               >
                 Yuborish
               </button>
             </div>
           </div>
 
-          <div className="">
+          <div className="max-md:hidden">
             <div className="bg-[url(/img/Ellipse.svg)] w-[550px] h-[510px] bg-no-repeat bg-cover flex justify-center items-center">
               <img src="./img/Giveaway.svg" alt="" />
             </div>

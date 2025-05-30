@@ -43,10 +43,12 @@ export const Faq = () => {
   };
 
   return (
-    <div className="mb-[89px]">
-      <div className="flex gap-[40px] mb-[60px]">
-        <div className="bg-[#B9FF66] rounded-[8px] px-[7px]">
-          <h2 className="font-medium text-[40px]">Ko’p beriladigan savollar</h2>
+    <div className="md:mb-[89px] mb-[70px] max-md:mx-[10px]">
+      <div className="flex md:flex-row flex-col gap-[20px] md:gap-[40px] mb-[60px]">
+        <div className="bg-[#B9FF66] rounded-[8px] px-[7px] mr-[5%]">
+          <h2 className="font-medium text-[28px] md:text-[40px]">
+            Ko’p beriladigan savollar
+          </h2>
         </div>
         <div className="max-w-[292px]">
           <p className="font-normal text-[18px]">
@@ -63,18 +65,22 @@ export const Faq = () => {
               <div
                 className={`Card ${
                   isOpen ? "bg-[#B9FF66]" : "bg-[#F3F3F3]"
-                } rounded-[45px] px-[57px] py-[41px] border-black border-2 transition-colors duration-300`}
+                } md:rounded-[45px] rounded-[25px] md:px-[57px] px-[10px] py-[16px] md:py-[41px] border-black border-2 transition-colors duration-300`}
               >
                 <div
                   className={`${
                     isOpen ? "border-b-2 pb-[30px]" : ""
-                  } flex justify-between items-center`}
+                  } flex justify-between items-center gap-[10px]`}
                 >
-                  <div className="flex items-center gap-[25px]">
-                    <h1 className="font-medium text-[60px]">0{faq.number}</h1>
-                    <h2 className="font-medium text-[30px]">{faq.title}</h2>
+                  <div className="flex items-center md:gap-[25px] gap-[10px]">
+                    <h1 className="font-medium md:text-[60px] text-[40px] max-md:border-r-2 max-md:pr-[10px]">
+                      0{faq.number}
+                    </h1>
+                    <h2 className="font-medium md:text-[30px] text-[20px]">
+                      {faq.title}
+                    </h2>
                   </div>
-                  <button onClick={() => handleToggle(index)}>
+                  <button className="" onClick={() => handleToggle(index)}>
                     {isOpen ? <Minus /> : <Plus />}
                   </button>
                 </div>

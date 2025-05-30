@@ -44,16 +44,16 @@ export const Footer = ({ setActive, active }) => {
 
   return (
     <>
-      <div className="bg-black px-[60px] pt-[35px] pb-[50px] rounded-t-[45px]">
-        <div className="flex items-center justify-between pb-[66px]">
-          <div className="flex items-center gap-[17px]">
+      <div className="bg-black px-[20px] md:px-[60px] pt-[35px] pb-[50px] rounded-t-[45px]">
+        <div className="flex md:flex-row flex-col max-md:gap-[20px] items-center justify-between pb-[66px]">
+          <div className="flex  items-center gap-[17px]">
             <FooterLogoIcon />
             <h3 className=" font-bold text-[40px] leading-[100%] text-white">
               MyFit
             </h3>
           </div>
           <div className="flex items-center gap-[150px] ">
-            <ul className="flex items-center gap-[40px] ">
+            <ul className="max-md:hidden flex items-center gap-[40px] ">
               {[
                 "Malumot",
                 "Imkoniyatlar",
@@ -88,8 +88,8 @@ export const Footer = ({ setActive, active }) => {
             </div>
           </div>
         </div>
-        <div className="boglanish flex items-center gap-[154px] pb-[50px] border-[#fff] border-b ">
-          <div>
+        <div className="boglanish flex md:flex-row flex-col items-center gap-[50px] md:gap-[154px] pb-[50px] border-[#fff] border-b  max-md:text-center">
+          <div className="max-md:flex max-md:flex-col max-md:items-center max-md:justify-center">
             <h3 className="rounded-[10px] bg-[#b9ff66] font-[500] text-[20px] p-[7px] leading-[100%] w-[192px] mb-[27px] ">
               Biz bilan bog’lanish
             </h3>
@@ -115,10 +115,10 @@ export const Footer = ({ setActive, active }) => {
               </a>
             </p>
           </div>
-          <div className="rounded-[10px] bg-[#292a32] py-[58px] px-[40px] flex items-center gap-[20px] w-[517px] ">
+          <div className="rounded-[10px] bg-[#292a32] md:py-[58px] md:px-[40px] py-[29px] px-[10px]  flex items-center md:gap-[20px] justify-between md:w-[517px] w-full">
             <div>
               <input
-                className="font-[400] text-[18px] text-white placeholder:text-zinc-400  py-[22px] pl-[35px] border rounded-[14px] "
+                className="font-[400] text-[18px] text-white placeholder:text-zinc-400  md:py-[22px] md:pl-[35px] py-[10px] pl-[15px] border rounded-[14px] "
                 type="text"
                 placeholder="+998XXXXXXXXX"
                 value={phone}
@@ -129,7 +129,7 @@ export const Footer = ({ setActive, active }) => {
             <div>
               <button
                 onClick={sendToTelegram}
-                className="font-[400] text-[28px] leading-[140%] text-center py-[20px] px-[35px] rounded-[14px] bg-[#b9ff66] cursor-pointer"
+                className="font-[400] text-[20px] md:text-[28px] leading-[140%] text-center md:py-[20px] md:px-[35px] py-[10px] px-[10px] rounded-[14px] bg-[#b9ff66] cursor-pointer"
               >
                 Kutish
               </button>

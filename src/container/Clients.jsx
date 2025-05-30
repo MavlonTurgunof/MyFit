@@ -2,10 +2,12 @@ import { Picture } from "../../public/icon";
 
 export const Clients = () => {
   return (
-    <div id="Mijozlar fikri" className="mb-[112px]">
-      <div className="flex gap-[40px] mb-[60px]">
-        <div className="bg-[#B9FF66] rounded-[8px] px-[7px]">
-          <h2 className="font-medium text-[40px]">Mijozlar fikri</h2>
+    <div id="Mijozlar fikri" className="md:mb-[112px] mb-[70px] mx-[10px]">
+      <div className="flex md:flex-row flex-col gap-[20px] md:gap-[40px] mb-[30px] md:mb-[60px]">
+        <div className="bg-[#B9FF66] rounded-[8px] px-[7px] max-md:mr-[50%]">
+          <h2 className="font-medium md:text-[40px] text-[28px]">
+            Mijozlar fikri
+          </h2>
         </div>
         <div className="max-w-[547px] ">
           <p className="font-normal text-[18px] ">
@@ -16,7 +18,7 @@ export const Clients = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 justify-items-center gap-[40px]">
+      <div className="grid md:grid-cols-3 grid-cols-1 justify-items-center   gap-[40px]">
         <div className="rounded-[45px] border-2 py-[40px] px-[35px] Card ">
           <div className="flex flex-row justify-start items-end gap-[20px] pb-[28px] border-b-2 mb-[20px]">
             <div className="w-[97.82px] h-[97.82px]">
@@ -102,8 +104,8 @@ export const Clients = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-end">
-        <button className="bg-black text-white py-[20px] px-[89.5px] font-normal text-[20px] rounded-[14px] mt-[40px] hover:scale-[110%] hover:shadow-black hover:shadow-2xl">
+      <div className="flex md:justify-end justify-around">
+        <button className="bg-black text-white md:py-[15px] md:px-[80px] py-[20px] px-[89.5px] font-normal text-[20px] rounded-[14px] mt-[40px] hover:scale-[110%] hover:shadow-black hover:shadow-2xl">
           Koproq...
         </button>
       </div>
