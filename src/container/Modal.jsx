@@ -72,6 +72,7 @@ const Modal = ({ onClose }) => {
                 name="phone"
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 placeholder="Telefon raqam"
+                inputMode="numeric"
                 className="border-[2px] border-[#B9FF66] w-full mb-[22px] p-[10px] md:p-[20px] rounded outline-none font-light text-[18px]"
               />
               <button
