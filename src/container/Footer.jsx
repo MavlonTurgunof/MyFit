@@ -122,6 +122,7 @@ export const Footer = ({ setActive, active }) => {
                 type="text"
                 placeholder="+998XXXXXXXXX"
                 value={phone}
+                inputMode="numeric"
                 onChange={(e) => setPhone(e.target.value)}
               />
               {error && <p className="text-red-500 text-[14px]">{error}</p>}
